@@ -118,7 +118,7 @@ function App(){
           </Field>
           
           { option === 'block' && 
-          <Field name="calc_blocks" label="Number of Blocks" className="align-items-center" hint="Commercial customers are allowed a max of ten blocks.">
+          <Field name="calc_blocks" label="Number of Blocks" className="align-items-center" hint={program === 'solar' ? "Commercial customers are allowed a max of ten blocks." : ""}>
             <input className="form-control" type="number" min="1" step="1" id="calc_blocks" value={blocks} maxLength={2} onChange={ e => setBlocks(e.target.value) } />
           </Field>
           }
